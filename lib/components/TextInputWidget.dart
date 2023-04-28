@@ -1,25 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/HomePage.dart';
-
-// This is basically like the driver.
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hello World App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
 
 // Responsible for Other parameters needed
 class TextInputWidget extends StatefulWidget {
