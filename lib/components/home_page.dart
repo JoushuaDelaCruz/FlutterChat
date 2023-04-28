@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/text_input_widget.dart';
-import 'package:hello_world/models/post.dart';
-import 'package:hello_world/components/post_lists.dart';
+import '/components/text_input_widget.dart';
+import '../models/post.dart';
+import '/components/post_lists.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

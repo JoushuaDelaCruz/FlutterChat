@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/home_page.dart';
+import 'components/home_page.dart';
 
 // This is basically like the driver.
 void main() {
