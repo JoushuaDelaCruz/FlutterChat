@@ -4,7 +4,8 @@ import '../models/post.dart';
 import '/components/post_lists.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String name;
+  const HomePage({super.key, required this.name});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   void newPost(String text) {
     setState(() {
-      posts.add(Post(text, "Default Author"));
+      posts.add(Post(text, widget.name));
     });
   }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/home_page.dart';
+import 'screens/login.dart';
 
 // This is basically like the driver.
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
