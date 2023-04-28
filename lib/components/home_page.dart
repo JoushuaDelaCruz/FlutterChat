@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/TextInputWidget.dart';
+import 'package:hello_world/components/text_input_widget.dart';
+import 'package:hello_world/models/post.dart';
+import 'package:hello_world/components/post_lists.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,11 +11,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String text = "";
+  List<Post> posts = [];
 
-  void changeInput(String text) {
+  void newPost(String text) {
     setState(() {
-      this.text = text;
+      posts.add(Post(text, "Default Author"));
     });
   }
 
@@ -22,8 +24,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(title: const Text("Hello World App")),
         body: Column(children: <Widget>[
-          TextInputWidget(callback: changeInput),
-          Text(text)
+          Expanded(
+              child: PostList(
+            listsPosts: posts,
+          )),
+          TextInputWidget(callback: newPost),
         ]));
   }
 }
